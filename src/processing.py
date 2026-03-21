@@ -1,17 +1,17 @@
-def filter_by_state(data: list, state: str = "EXECUTED") -> list:
+def filter_by_state(data_list: list, state: str = "EXECUTED") -> list:
     """
     Функция возвращает новый список словарей, содержащий только те словари,
-    у которых ключ stateсоответствует указанному значению.
+    у которых ключ state соответствует указанному значению.
     """
-    result = []
-    for item in data:
+    result_list: list = []
+    for item in data_list:
         if item.get("state") == state:
-            result.append(item)
+            result_list.append(item)
 
-    return result
+    return result_list
 
 
-def sort_by_date(data: list, descending: bool = True) -> list:
-    """Функция возвращаtт новый список, отсортированный по дате"""
+def sort_by_date(data_list: list, descending: bool = True) -> list:
+    """Функция возвращает новый список, отсортированный по дате"""
 
-    return sorted(data, key=lambda x: x["date"], reverse=descending)
+    return sorted(data_list, key=lambda x: x["date"], reverse=descending)
