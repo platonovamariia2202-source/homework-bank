@@ -17,6 +17,9 @@ def mask_account_card(account_card: str) -> str:
 
 def get_date(date_line: str) -> str:
     """возвращает строку с датой в формате ДД.ММ.ГГГГ"""
+
+    if not date_line:
+        return ""
     date_part = date_line[:10]
     parts = date_part.split("-")
 
