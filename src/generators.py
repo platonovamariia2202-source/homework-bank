@@ -8,3 +8,9 @@ def filter_by_currency(transactions: list, currency_code: str):
             continue
         if trans_currency == currency_code:
             yield transaction
+
+def transaction_descriptions(transactions):
+    """Генератор, возвращающий описание каждой транзакции."""
+
+    for transaction in transactions:
+        yield transaction.get("description", "Описание отсутствует")
