@@ -79,6 +79,28 @@ for card in card_number_generator(1, 5):
 # 0000 0000 0000 0005
 ```
 
+## Декоратор `log`
+
+Модуль `decorators` содержит декоратор для логирования вызовов функций.
+
+### `log(filename=None)`
+Логирует выполнение функции в файл или консоль.
+
+**Параметры:**
+- `filename` (str, optional) — имя файла для записи логов. Если не указан, логи выводятся в консоль.
+
+**Пример использования:**
+
+```python
+from src.decorators import log
+
+@log(filename="mylog.txt")
+def my_function(x, y):
+    return x + y
+
+my_function(1, 2)  # запишет "my_function ok" в файл mylog.txt
+```
+
 ## Документация:
 
 Подробное описание функций находится в документации проекта
