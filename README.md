@@ -79,6 +79,40 @@ for card in card_number_generator(1, 5):
 # 0000 0000 0000 0005
 ```
 
+## Обработка JSON-данных
+
+Модуль `utils` содержит функцию `get_transactions_from_json`, которая загружает список транзакций из JSON-файла.
+
+**Пример использования:**
+```python
+from src.utils import get_transactions_from_json
+
+transactions = get_transactions_from_json("data/operations.json")
+```
+
+## Конвертация валют
+
+Модуль `external_api` содержит функцию `convert_currency`, которая конвертирует сумму в USD или EUR в рубли через внешнее API.
+
+**Пример:**
+```python
+from src.external_api import convert_currency
+
+transaction = {"amount": "100", "currency": {"code": "USD"}}
+rub_amount = convert_currency(transaction)
+```
+
+markdown
+## Переменные окружения
+
+Для работы с API конвертации валют требуется ключ доступа.  
+Создайте файл `.env` в корне проекта:
+API_KEY=your_api_key_here
+
+text
+
+Пример настройки см. в файле `.env.example`.
+
 ## Документация:
 
 Подробное описание функций находится в документации проекта
