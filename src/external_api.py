@@ -20,7 +20,7 @@ def convert_currency(transaction: Dict[str, Any]) -> float:
     if not api_key:
         return amount
 
-    url = f"http://api.exchangeratesdata.io/v1/latest?access_key={api_key}&base={currency}&symbols=RUB"
+    url = f"http://api.exchangeratesdata.io/v1/latest?apikey={api_key}&base={currency}&symbols=RUB"
 
     try:
         response = requests.get(url)
