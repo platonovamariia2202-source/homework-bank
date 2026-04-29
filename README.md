@@ -79,6 +79,24 @@ for card in card_number_generator(1, 5):
 # 0000 0000 0000 0005
 ```
 
+## Работа с CSV и Excel
+
+Модуль `file_processing` содержит функции для чтения транзакций из CSV и Excel-файлов.
+
+### `read_transactions_from_csv(file_path)`
+Считывает транзакции из CSV-файла и возвращает список словарей.
+
+### `read_transactions_from_excel(file_path)`
+Считывает транзакции из Excel-файла и возвращает список словарей.
+
+**Пример использования:**
+```python
+from src.file_processing import read_transactions_from_csv, read_transactions_from_excel
+
+transactions_csv = read_transactions_from_csv("data/transactions.csv")
+transactions_excel = read_transactions_from_excel("data/transactions_excel.xlsx")
+```
+
 ## Документация:
 
 Подробное описание функций находится в документации проекта
